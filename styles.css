@@ -69,17 +69,68 @@ nav ul li a:hover {
     color: #ffffff;
 }
 
-/* Main Content Section */
-main {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-    background: white;
+/*Welcome and Announcements Section */
+.welcome-announcements {
+    background-color: #635e5e; 
     border-radius: 5px;
+    padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-h2 {
-    color: #e21c28;
+.welcome-announcements h2 {
+    color: #ffffff;
     margin-bottom: 15px;
+}
+
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10 px;
+    padding: 0;
+    height: auto;
+}
+
+.iframe-container iframe {
+    width: 100%;
+    max-width: 1000px;  
+    height: 800px;     
+    border: none; 
+    display: block;
+    margin: 0 auto;
+    padding: 0;   
+    scroll-padding: 0px;
+}
+
+/* Footer */
+footer {
+    background-color: white;
+    color: #333; 
+    text-align: center;
+    padding: 15px 10px; 
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer ul {
+    list-style: none; 
+    padding: 5;
+    margin: 2px 0;
+}
+
+footer ul li {
+    margin: 2px 0;
+}
+
+footer a {
+    color: #007acc; 
+    text-decoration: none; 
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
