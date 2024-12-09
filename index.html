@@ -1,50 +1,51 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Klondike Teacher Resource Hub</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <header class="main-header">
         <img src="/img/logo_klondike-web.png" alt="Klondike Bear" class="header-image">
         <h1>Champion Resource Hub</h1>
+        <script defer src="script.js"></script>
     </header>
 
     <nav>
         <ul>
-            <li><a href="Home.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="teacher-resources.html">Resources</a></li>
             <li><a href="important links.html">Important Links</a></li>
         </ul>
     </nav>
     <main>
+        <section id="weather-section">
+            <h2>Current Weather at Klondike</h2>
+            <p id="weather">Loading weather data...</p>
+            <img id="weather-icon" alt="Weather Icon" style="display: none;">
+        </section>
+        
         <section class="welcome-announcements">
-            <h2>Welcome! Add this page to your bookmarks. It will serve as your main source for daily information. Here are some important announcements and shout-outs!</h2>
+            <h2>Welcome, Klondike Champions! Add this page to your bookmarks. It will serve as your main source for daily information. Here are some important announcements and shout-outs!</h2>
             <div class="iframe-container">
                 <iframe src="https://docs.google.com/document/d/e/2PACX-1vSqgHBx5MKU179Dz0gP0vYjEDA9Twgbna2tadYyrPKuOIdMrMSzyGM4n1P7qprjkjepNia9VuuFuqni/pub?embedded=true"></iframe>
-                </div>
+            </div>
         </section>
     </main>
-    
+    <footer>
+        <ul>
+            <li>
+                <a href="https://maps.app.goo.gl/wPCsjSREfqCSqZPH9" target="_blank">
+                    3807 Klondike Lane, Louisville, KY 40218
+                </a>
+            </li>
+            <li>(502) 485-8286</li>
+        </ul>
+        <p>&copy; 2024 Klondike Teacher Resource Hub</p>
+    </footer>
+    <script src="weather.js"></script>
 </body>
-
-
-<footer>
-    <ul>
-        <li>
-            <a href="https://maps.app.goo.gl/wPCsjSREfqCSqZPH9" target="_blank">
-                3807 Klondike Lane, Louisville, KY 40218
-            </a>
-        </li>
-        <li>(502) 485-8286</li>
-    </ul>
-    <p>&copy; 2024 Klondike Teacher Resource Hub</p>
-</footer>
-
-
 </html>
