@@ -19,19 +19,36 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="calendar.html">Calendar</a></li>
-            <li><a href="important links.html">Important Links</a></li>
             <li><a href="teacher-resources.html" class="active">Resources</a></li>
+            <li><a href="links.html">Important Links</a></li>
         </ul>
     </nav>
-    
+
     <main>
         <section id="teacher-resources">
-            <h2>Available Resources</h2>
-            <p>Explore the resources below for helpful tools and materials.</p>
-            <div id="resources-container" class="resources-container"></div> 
+            <h2>Resource Cards</h2>
+            <div id="resources-container" class="resources-container">
+            </div>
+
+            <h3>Add a New Resource</h3>
+            <form id="resource-form">
+                <input type="text" id="resource-title" placeholder="Resource Title" required>
+                <input type="url" id="resource-link" placeholder="Resource URL" required>
+                <textarea id="resource-description" placeholder="Resource Description" required></textarea>
+                <button type="submit">Add Resource</button>
+            </form>
+        </section>
+
+        <section id="weather-section">
+            <h2>Current Weather</h2>
+            <p id="weather">
+                <span id="temperature"></span><br>
+                <span id="description"></span><br>
+                <img id="weather-icon" alt="Weather Icon" />
+            </p>
         </section>
     </main>
-    
+
     <footer>
         <ul>
             <li>
@@ -44,5 +61,5 @@
         <p>&copy; 2024 Klondike Teacher Resource Hub</p>
     </footer>
 </body>
-</html>
 
+</html>

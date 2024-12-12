@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Living Calendar</title>
-    <link rel="stylesheet" href="calendar.css">
+    <title>Important Links</title>
+    <link rel="stylesheet" href="links.css">
 </head>
+
 <body>
     <header class="main-header">
         <img src="/img/logo_klondike-web.png" alt="Klondike Bear" class="header-image">
-        <h1>Living Calendar</h1>
-        <script defer src="calendar.js"></script>
+        <h1>Important Links</h1>
+        <script defer src="links.js"></script>
     </header>
 
     <nav>
@@ -21,12 +23,12 @@
             <li><a href="links.html">Important Links</a></li>
         </ul>
     </nav>
-    <main>
 
-        <section class="calendar">
-            <div class="iframe-container">
-                <iframe src="https://docs.google.com/document/d/e/2PACX-1vRddjuXF1dYBtl-BDvN04IUklolmRoXS-DOmtUUwkPE4QvC4UMoU8T_FL--J-t9c_KPjybXigit6Ds-/pub?embedded=true"></iframe>
-            </div>
+    <main>
+        <section id="links-section">
+            <h2>Important School Links</h2>
+            <ul id="links-list"></ul>
+            <p>Total Resources: <span id="resource-count">0</span></p>
         </section>
 
         <section id="weather-section">
@@ -38,17 +40,18 @@
             </p>
         </section>
     </main>
+
     <footer>
         <ul>
-            <li>
-                <a href="https://maps.app.goo.gl/wPCsjSREfqCSqZPH9" target="_blank">
-                    3807 Klondike Lane, Louisville, KY 40218
-                </a>
-            </li>
+            <li><a href="https://maps.app.goo.gl/wPCsjSREfqCSqZPH9" target="_blank">3807 Klondike Lane, Louisville, KY 40218</a></li>
             <li>(502) 485-8286</li>
         </ul>
         <p>&copy; 2024 Klondike Teacher Resource Hub</p>
     </footer>
-    <script src="calendar.js"></script>
+
+    <script src="script.js"></script>
+    <script src="important-links.js"></script>
 </body>
+
 </html>
+

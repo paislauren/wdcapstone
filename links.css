@@ -73,39 +73,6 @@ nav ul li a:hover {
     color: #ffffff;
 }
 
-/* Welcome and Announcements Section */
-.welcome-announcements {
-    background-color: #635e5e; 
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.welcome-announcements h2 {
-    color: #ffffff;
-    margin-bottom: 15px;
-}
-
-.iframe-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    padding: 0;
-    height: auto;
-}
-
-.iframe-container iframe {
-    width: 100%;
-    max-width: 1000px;  
-    height: 800px;     
-    display: block;
-    margin: 0 auto;
-    padding: 0;   
-    scroll-padding: 0px;
-}
 
 /* Footer */
 footer {
@@ -171,5 +138,3 @@ main {
     height: auto;
     margin-top: 5px;
 }
-
-

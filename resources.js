@@ -1,64 +1,83 @@
-const teacherResources = [
-    { 
-        name: "TeachersPayTeachers", 
-        link: "https://www.teacherspayteachers.com", 
-        description: " Discover, share, and sell innovative resources tailored to inspire unique teaching and learning experiences.",
+const resources = [
+    {
+        title: "Canva",
+        description: "A graphic design platform to create stunning visuals and presentations.",
+        link: "https://www.canva.com"
     },
-    { 
-        name: "Khan Academy", 
-        link: "https://www.khanacademy.org", 
-        description: "Free online lessons and practice exercises for students.",
-        icon: "" 
+    {
+        title: "JCPS Digital Learning Channel",
+        description: "Explore tutorials and resources to enhance digital learning.",
+        link: "https://www.youtube.com/c/JCPSDigitalLearningChannel"
     },
-    { 
-        name: "PBS Learning Media", 
-        link: "https://www.pbslearningmedia.org", 
-        description: "Educational videos and interactive activities from PBS.",
-        icon: "" 
+    {
+        title: "Teachers Pay Teachers",
+        description: "Discover educational resources and lesson plans for educators.",
+        link: "https://www.teacherspayteachers.com"
     },
-    { 
-        name: "Edmodo", 
-        link: "https://www.edmodo.com", 
-        description: "A platform for classroom collaboration and communication.",
-        icon: "" 
+    {
+        title: "Clever",
+        description: "A single sign-on platform for seamless access to educational apps and tools.",
+        link: "https://www.clever.com"
     }
 ];
 
-function displayResources() {
-    const resourcesContainer = document.getElementById("resources-container");
+const container = document.getElementById("resources-container");
 
-    if (resourcesContainer) {
-        teacherResources.forEach(resource => {
-            // Create a card for each resource
-            const card = document.createElement("div");
-            card.classList.add("resource-card");
-
-
-            const icon = document.createElement("img");
-            icon.src = resource.icon;
-            icon.alt = `${resource.name} Icon`;
-            card.appendChild(icon);
-
-       
-            const title = document.createElement("h3");
-            title.textContent = resource.name;
-            card.appendChild(title);
-
-           
-            const description = document.createElement("p");
-            description.textContent = resource.description;
-            card.appendChild(description);
-
-        
-            const link = document.createElement("a");
-            link.href = resource.link;
-            link.textContent = "Visit Resource";
-            link.target = "_blank";
-            link.classList.add("resource-link");
-            card.appendChild(link);
-
-          
-            resourcesContainer.appendChild(card);
-        });
-    }
+function renderResources() {
+    container.innerHTML = '';
+    resources.forEach(resource => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+            <h3 class="card-title">${resource.title}</h3>
+            <p class="card-description">${resource.description}</p>
+            <a class="card-link" href="${resource.link}" target="_blank">Visit</a>
+        `;
+        container.appendChild(card);
+    });
 }
+
+const form = document.getElementById("resource-form");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const title = document.getElementById("resource-title").value;
+    const link = document.getElementById("resource-link").value;
+    const description = document.getElementById("resource-description").value;
+
+    if (title && link && description) {
+        resources.push({ title, description, link });
+        renderResources();
+        form.reset();
+    }
+});
+
+renderResources();
+
+
+// Weather
+document.addEventListener('DOMContentLoaded', async () => {
+    const weatherElement = document.getElementById('weather');
+    
+    try {
+        const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Louisville&appid=2c973da105dbad25dd9922831d94642a&units=imperial');
+        
+        if (!response.ok) throw new Error('Network response was not ok');
+        
+        const weatherData = await response.json();
+        const temp = Math.round(weatherData.main.temp);
+        const description = weatherData.weather[0].description.toUpperCase();
+        const icon = weatherData.weather[0].icon;
+        const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+        
+        weatherElement.innerHTML = `
+            <img src="${iconUrl}" alt="${description}" />
+            <div id="temp">${temp}°F</div>
+            <div id="description">${description}</div>
+        `;
+    } catch (error) {
+        console.error('Error fetching weather data:', error);
+        weatherElement.textContent = 'Unable to load weather data.';
+    }
+});
