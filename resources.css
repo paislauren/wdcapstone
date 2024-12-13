@@ -42,9 +42,11 @@ body {
 /* Navigation Menu */
 nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: center; 
+    align-items: center;     
     list-style: none;
     margin: 20px 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -68,6 +70,7 @@ nav ul li a.active {
 nav ul li a:hover {
     color: #811427;
 }
+
 
 #teacher-resources h3 {
     margin-top: 40px; 
@@ -215,4 +218,81 @@ form button:hover {
     width: 100px;
     height: auto;
     margin-top: 5px;
+}
+
+/* Mobile and Desktop Responsiveness */
+@media screen and (max-width: 768px) {
+    .main-header {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .header-image {
+        max-width: 100%;
+    }
+
+    .resources-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    #weather-section {
+        max-width: 100%;
+    }
+
+    #temperature, #description {
+        font-size: 1.2rem;
+    }
+
+    #weather-icon {
+        width: 80px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .main-header {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        justify-content: space-around;
+    }
+
+    .resources-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    #weather-section {
+        max-width: 300px;
+    }
+
+    #temperature, #description {
+        font-size: 1.5rem;
+    }
+
+    #weather-icon {
+        width: 100px;
+    }
 }

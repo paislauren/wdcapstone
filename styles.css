@@ -177,5 +177,92 @@ main {
     margin-top: 5px;
 }
 
+/* Styles for small screens */
+@media (max-width: 600px) {
+    .main-header h1 {
+        font-size: 2rem;
+    }
 
+    .main-header p {
+        font-size: 1rem;
+    }
 
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        margin: 8px 0;
+    }
+
+    .welcome-announcements {
+        padding: 15px;
+    }
+
+    .iframe-container iframe {
+        width: 100%;
+        height: 400px;
+    }
+
+    #weather-section {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    footer {
+        padding: 10px 5px;
+    }
+
+    .header-image {
+        max-width: 100%; 
+        height: auto;
+    }
+}
+
+/* Styles for larger screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .main-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-header p {
+        font-size: 1.1rem;
+    }
+
+    .iframe-container iframe {
+        height: 600px;
+    }
+
+    #weather-section {
+        max-width: 80%;
+    }
+}
+
+/* Styles for desktop screens */
+@media (min-width: 1025px) {
+    .main-header h1 {
+        font-size: 3rem;
+    }
+
+    .main-header p {
+        font-size: 1.2rem;
+    }
+
+    .iframe-container iframe {
+        height: 800px;
+    }
+
+    .welcome-announcements {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 15px 10px;
+    }
+}

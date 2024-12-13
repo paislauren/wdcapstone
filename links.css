@@ -17,6 +17,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Header */
@@ -30,17 +32,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 100%;
+    justify-content: center;
 }
 
 .header-image {
-    max-width: 700px;
+    max-width: 100%;
     height: auto;
     margin-bottom: 10px;
 }
 
 .main-header h1 {
     margin: 0;
-    font-size: 3rem;
+    font-size: 2.5rem; 
 }
 
 .main-header p {
@@ -55,6 +59,7 @@ nav ul {
     list-style: none;
     margin: 20px 0;
     padding: 0;
+    width: 100%;
 }
 
 nav ul li {
@@ -80,9 +85,9 @@ nav ul li a:hover {
 /* Footer */
 footer {
     background-color: white;
-    color: #333; 
+    color: #333;
     text-align: center;
-    padding: 15px 10px; 
+    padding: 15px 10px;
     position: relative;
     bottom: 0;
     left: 0;
@@ -91,7 +96,7 @@ footer {
 }
 
 footer ul {
-    list-style: none; 
+    list-style: none;
     padding: 5;
     margin: 2px 0;
 }
@@ -101,8 +106,8 @@ footer ul li {
 }
 
 footer a {
-    color: #007acc; 
-    text-decoration: none; 
+    color: #007acc;
+    text-decoration: none;
 }
 
 footer a:hover {
@@ -119,9 +124,9 @@ main {
 #weather-section {
     text-align: center;
     margin-top: 20px;
-    background-color: #c2dff8db; 
-    padding: 10px 20px; 
-    border-radius: 10px; 
+    background-color: #c2dff8db;
+    padding: 10px 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
     margin-left: auto;
@@ -129,15 +134,15 @@ main {
 }
 
 #temperature, #description {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     font-weight: normal;
     color: #333;
     margin: 5px 0;
-    text-transform: capitalize; 
+    text-transform: capitalize;
 }
 
 #weather-icon {
-    width: 100px; 
+    width: 100px;
     height: auto;
     margin-top: 5px;
 }
@@ -186,3 +191,87 @@ ul#links-list li a:hover {
     text-decoration: underline;
 }
 
+/* Media Query for larger screens (desktop) */
+@media (min-width: 1024px) {
+    .main-header h1 {
+        font-size: 2.5rem; 
+    }
+
+    nav ul {
+        justify-content: center; 
+    }
+
+    nav ul li a {
+        font-size: 1.4rem; 
+    }
+
+    /* Weather Section */
+    #weather-section {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 20px;
+    }
+
+    /* Links Section */
+    #links-section {
+        padding: 40px 25px;
+    }
+
+    ul#links-list {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px;
+    }
+}
+
+/* Media Query for mobile screens */
+@media (max-width: 767px) {
+    body {
+        padding: 10px; 
+        justify-content: flex-start; 
+    }
+
+    .main-header {
+        padding: 15px;
+        text-align: center;
+        width: 100%; 
+    }
+
+    .header-image {
+        max-width: 90%; 
+        height: auto;
+    }
+
+    .main-header h1 {
+        font-size: 2rem; 
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1.1rem;
+        padding: 5px 10px;
+    }
+
+    #weather-section {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    #links-section {
+        padding: 25px 15px;
+    }
+
+    ul#links-list {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+}
