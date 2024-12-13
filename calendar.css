@@ -45,7 +45,7 @@ body {
 
 .main-header p {
     margin: 5px 0 0;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
 }
 
 /* Navigation Menu */
@@ -69,61 +69,51 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: #ffffff;
-}
-
-/* Welcome and Announcements Section */
-.welcome-announcements {
-    background-color: #635e5e; 
+nav ul li a.active {
+    color: white;
+    padding: 5px 10px;
     border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    text-align: center;
 }
 
-.welcome-announcements h2 {
-    color: #ffffff;
-    margin-bottom: 15px;
+nav ul li a:hover {
+    color: #811427;
 }
 
+/* Calendar Section */
 .iframe-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    width: 100%;
+    margin-top: 20px;
     padding: 0;
-    height: auto;
+    overflow: hidden;
 }
 
 .iframe-container iframe {
     width: 100%;
-    max-width: 1000px;  
-    height: 800px;     
+    height: 60vh;
+    max-width: 1000px;
+    border: none;
+    margin: 0;
+    padding: 0;
     display: block;
-    margin: 0 auto;
-    padding: 0;   
-    scroll-padding: 0px;
 }
 
 /* Footer */
 footer {
     background-color: white;
-    color: #333; 
+    color: #333;
     text-align: center;
-    padding: 15px 10px; 
+    padding: 15px 10px;
     position: relative;
     bottom: 0;
-    left: 0;
     width: 100%;
-    border-radius: 5px;
 }
 
 footer ul {
-    list-style: none; 
-    padding: 5;
-    margin: 2px 0;
+    list-style: none;
+    padding: 5px;
 }
 
 footer ul li {
@@ -131,8 +121,8 @@ footer ul li {
 }
 
 footer a {
-    color: #007acc; 
-    text-decoration: none; 
+    color: #007acc;
+    text-decoration: none;
 }
 
 footer a:hover {
@@ -149,9 +139,9 @@ main {
 #weather-section {
     text-align: center;
     margin-top: 20px;
-    background-color: #c2dff8db; 
-    padding: 10px 20px; 
-    border-radius: 10px; 
+    background-color: #c2dff8db;
+    padding: 10px 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
     margin-left: auto;
@@ -159,15 +149,15 @@ main {
 }
 
 #temperature, #description {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     font-weight: normal;
     color: #333;
     margin: 5px 0;
-    text-transform: capitalize; 
+    text-transform: capitalize;
 }
 
 #weather-icon {
-    width: 100px; 
+    width: 100px;
     height: auto;
     margin-top: 5px;
 }
